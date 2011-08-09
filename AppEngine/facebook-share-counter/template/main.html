@@ -1,0 +1,153 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Facebook Share Counter</title>
+
+	<meta name="author" content="eu@luisleao.com.br" />
+	<meta name="viewport" content="user-scalable=no, width=1024" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	
+	<link rel="apple-touch-icon" href="/static/img/touch-icon.png" />
+	<link rel="apple-touch-icon-precomposed" href="/static/img/touch-icon.png" />
+	
+	
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/> 
+	<link rel="stylesheet" href="/static/css/reset.css" type="text/css" charset="utf-8" /> 
+	<link rel="stylesheet" href="/static/css/960.css" type="text/css" charset="utf-8" /> 
+	<link rel="stylesheet" href="/static/css/basic.css" type="text/css" charset="utf-8" />
+	<script type="text/javascript" src="/static/js/jquery-1.6.2.min.js"></script>
+	<script type="text/javascript" src="/static/js/application.js"></script>
+
+</head>
+<body>
+
+	{% if authenticated %}
+	
+	<div id="formulario">
+		<div class="container_12">
+			<div class="grid_4">&nbsp;</div>
+			<div class="grid_6">
+				<form class="content" method="POST" action="#">
+					<h3>Add new link</h3>
+					<table>
+					{{ add_form }}
+					</table>
+					<div class="form_buttons">
+					<a href="#" id="btn_submit" class="button">submit</a> <a href="#" id="btn_cancel" class="button">cancel</a>
+					</div>
+				</form>
+			</div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	
+	<div id="detalhe">
+		<div class="container_12">
+			<div class="grid_4">&nbsp;</div>
+			<div class="grid_6">
+				<div class="content">
+					<h3>Link Details</h3>
+					<div class="link_url"></div>
+		
+					<ul id="xbees">
+						<li class="model" style="display: none;">
+							<span class="name">name</span>
+							<span class="bound">bound</span>
+							<span class="unbound">unbound</span>
+						</li>
+					</ul>
+					<div class="form_buttons">
+						<a href="#" id="btn_close" class="button">ok</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="clear"></div>
+	</div>
+		
+	<div class="shadow">
+	</div>
+
+	{% endif %}
+	
+	<div class="container_12">
+	
+	<div class="grid_12">
+		<h1>Facebook Share Counter</h1>
+		<h2>we like to see <span>how many</span> people liked it</h2>
+	</div>
+	
+	{% if authenticated %}
+	
+	
+	<div class="grid_12 links_grid">
+		<h3>Links &amp; Likes</h3>
+		
+		<ul id="links">
+	      <li class="model" style="display: none;">
+			<a href="#" class="name">NAME</a>
+	        <span class="status">status</span> 
+	        <span class="count">-</span>
+			{% if admin %}
+	        <span class="delete" title="Delete this record!">delete</span>
+			{% endif %}
+	        <span class="index" style="width: 0">(0%)</span>
+	      </li>
+	    </ul>
+	
+		<a href="#" id="btn_addlink" class="button">add new link</a><a href="#" id="btn_update" class="button">update data</a>
+	
+	</div>
+
+	<div class="clear separator"></div>
+
+	<div class="grid_9" id="about">
+		<div class="content">
+			<h3>About</h3>
+			<p>This project was created by <a href="http://luisleao.com.br/" target="_blank">Luís Leão</a> as a complement for <a href="http://www.fullsix.es/ilikediesel/english/" target="_blank">iLikeDiesel</a> campaign.</p>
+			<p>It uses Arduino, XBee and web's access to provide the user see how many people liked and interacted with a link in realtime.</p>
+			<p>The purpose is demonstrate the use of xbee radios and also realtime discover new devices in the network and provide web access controll of that devices.</p>
+			<p>You can download the source of this project on <a href="http://github.com/luisleao/facebook-share-counter/" target="_blank">GitHub</a>.</p>
+		</div>
+	</div>
+
+	
+	<div class="grid_3">
+		{% if admin %}
+		{% endif %}
+		
+		Hello 
+		{% ifequal nickname email %}
+			<strong>{{email}}</strong>!
+		{% else %}
+			<strong>{{nickname}}</strong>!
+		{% endifequal %}
+		<p><a href="{{auth_url}}">Logout</a></p>
+		
+	</div>
+
+
+	{% else %}
+		<div class="grid_3">&nbsp;</div>
+		<div class="grid_6">
+	
+			<div class="content">
+				<h3>You are not authenticated!</h3>
+				Please <a href="{{auth_url}}">authenticate</a> now to access the manager.
+			</div>
+		</div>
+	{% endif %}
+
+	<div class="clear"></div>
+
+
+	</div>
+
+
+</body>
+</html>

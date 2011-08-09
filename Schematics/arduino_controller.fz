@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module fritzingVersion="0.6.2b.07.11.5217">
+    <views>
+        <view name="breadboardView" backgroundColor="#cccccc"/>
+        <view name="schematicView" backgroundColor="#ffffff"/>
+        <view name="pcbView" backgroundColor="#a0a8b3"/>
+    </views>
+    <instances>
+        <instance moduleIdRef="TwoLayerRectanglePCBModuleID" modelIndex="28699" path=":/resources/parts/core/rectangle_pcb_two_layers.fzp">
+            <property name="width" value="169.333333333333"/>
+            <property name="height" value="56.4444444444444"/>
+            <title>PCB2</title>
+            <views>
+                <pcbView layer="board">
+                    <geometry z="1.5" x="-100" y="383"/>
+                </pcbView>
+            </views>
+        </instance>
+        <instance moduleIdRef="4321DEAB24_ST" modelIndex="28850" path="/Users/luisleao/Desktop/Fritzing/parts/core/arduino.fzp">
+            <title>Arduino1</title>
+            <views>
+                <breadboardView layer="breadboardbreadboard">
+                    <geometry z="1.50001" x="-113.834" y="-42.8706"/>
+                </breadboardView>
+                <schematicView layer="schematic">
+                    <geometry z="2.5" x="166.17" y="195.154"/>
+                    <titleGeometry visible="true" x="434.82" y="184.154" z="5.5" xOffset="268.65" yOffset="-11" textColor="#000000" fontSize="9">
+                        <displayKey key=""/>
+                        <displayKey key="part number"/>
+                    </titleGeometry>
+                </schematicView>
+                <pcbView layer="copper0">
+                    <geometry z="6.5" x="-91" y="393"/>
+                    <titleGeometry visible="true" x="56.51" y="386" z="12.5" xOffset="147.51" yOffset="-7" textColor="#ffffff" fontSize="5">
+                        <displayKey key=""/>
+                    </titleGeometry>
+                </pcbView>
+            </views>
+        </instance>
+        <instance moduleIdRef="WiFly_Shield-v17" modelIndex="28856" path="/Users/luisleao/Desktop/Fritzing/parts/core/WiFly_Shield-v17.fzp">
+            <title>Componente2</title>
+            <views>
+                <breadboardView layer="breadboard">
+                    <geometry z="2.5" x="171" y="-45"/>
+                </breadboardView>
+                <schematicView layer="schematic">
+                    <geometry z="2.5" x="499.913" y="247.654"/>
+                    <titleGeometry visible="true" x="742.086" y="236.654" z="5.50001" xOffset="242.173" yOffset="-11" textColor="#000000" fontSize="9">
+                        <displayKey key=""/>
+                        <displayKey key="part number"/>
+                    </titleGeometry>
+                </schematicView>
+                <pcbView layer="copper0">
+                    <geometry z="6.50001" x="509" y="245"/>
+                    <titleGeometry visible="true" x="736.374" y="238" z="12.5" xOffset="227.374" yOffset="-7" textColor="#ffffff" fontSize="5">
+                        <displayKey key=""/>
+                    </titleGeometry>
+                </pcbView>
+            </views>
+        </instance>
+        <instance moduleIdRef="xbeeshield-v13" modelIndex="28874" path="/Users/luisleao/Desktop/Fritzing/parts/core/xbeeshield-v13.fzp">
+            <title>Componente3</title>
+            <views>
+                <breadboardView layer="breadboard">
+                    <geometry z="2.50001" x="429.147" y="-60.1474">
+                        <transform m11="0" m12="-1" m13="0" m21="1" m22="0" m23="0" m31="-15.1474" m32="204.147" m33="1"/>
+                    </geometry>
+                </breadboardView>
+                <schematicView layer="schematic">
+                    <geometry z="2.50001" x="702.626" y="118.606"/>
+                    <titleGeometry visible="true" x="971.374" y="107.606" z="5.50002" xOffset="268.748" yOffset="-11" textColor="#000000" fontSize="9">
+                        <displayKey key=""/>
+                        <displayKey key="part number"/>
+                    </titleGeometry>
+                </schematicView>
+                <pcbView layer="copper0">
+                    <geometry z="6.50002" x="712" y="112"/>
+                    <titleGeometry visible="true" x="901" y="105" z="12.5" xOffset="189" yOffset="-7" textColor="#ffffff" fontSize="5">
+                        <displayKey key=""/>
+                    </titleGeometry>
+                </pcbView>
+            </views>
+        </instance>
+        <instance moduleIdRef="1a4bfb87a0f0fd2c59be43f3497d72e6" modelIndex="28877" path="/Users/luisleao/Desktop/Fritzing/parts/core/xbee.fzp">
+            <title>U3</title>
+            <views>
+                <breadboardView layer="breadboard">
+                    <geometry z="2.50002" x="542.698" y="-13.2859">
+                        <transform m11="0" m12="1" m13="0" m21="-1" m22="0" m23="0" m31="99.993" m32="14.2404" m33="1"/>
+                    </geometry>
+                </breadboardView>
+                <schematicView layer="schematic">
+                    <geometry z="2.50001" x="778.95" y="430.65"/>
+                    <titleGeometry visible="true" x="942.95" y="419.65" z="5.50003" xOffset="164" yOffset="-11" textColor="#000000" fontSize="9">
+                        <displayKey key=""/>
+                        <displayKey key="part number"/>
+                    </titleGeometry>
+                </schematicView>
+                <pcbView layer="copper0">
+                    <geometry z="6.50003" x="66.51" y="393"/>
+                    <titleGeometry visible="true" x="153.81" y="386" z="12.5" xOffset="87.3" yOffset="-7" textColor="#ffffff" fontSize="5">
+                        <displayKey key=""/>
+                    </titleGeometry>
+                </pcbView>
+            </views>
+        </instance>
+    </instances>
+</module>

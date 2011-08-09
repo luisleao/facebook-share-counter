@@ -1,0 +1,15 @@
+application: facebook-share-counter
+version: 1
+runtime: python
+api_version: 1
+
+handlers:
+- url: /static
+  static_dir: static
+
+#- url: /xbee/verify/.*
+#  script: main.py
+
+- url: .*
+  script: main.py
+#  secure: always
